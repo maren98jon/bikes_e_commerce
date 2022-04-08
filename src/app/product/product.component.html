@@ -1,0 +1,17 @@
+<div class="buyBike">
+        <div>
+                <p><b>{{bike?.brand}}</b></p>
+                <p class="bikename">{{bike?.name}}</p>
+                <img class="bikeImg" src="{{bike?.photo}}" alt="bikePhoto">
+                <p class="precio">Precio: {{bike?.price}}€</p>
+        </div>
+        <div class="buttonsContainer">
+                <div class="button">
+                        <p routerLink="/bikes/{{bike?.id}}">+ INFO</p>
+                </div>
+                <div class="button">
+                        <p>COMPRAR</p>
+                </div>
+        </div>
+
+</div>

@@ -1,0 +1,46 @@
+main{
+
+}
+
+.bikes{
+    padding:20px 0;
+}
+
+.categoryTitle{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    transition: 0.20s;
+    border-bottom:2px  solid black;
+}
+
+.categoryTitle:hover{
+    font-weight: bolder;
+    background-color: rgb(184, 184, 184);
+}
+
+.theX{
+    font-size: x-large;
+    transform: rotate(0deg);
+    transition: 0.5s;
+}
+
+.showCategoryBike{
+    display: flex;
+    flex-direction: column;
+}
+
+.noShowCategoryBike{
+    display: none;
+}
+
+@media (min-width: 450px){
+    .bikes{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+    }
+}
+

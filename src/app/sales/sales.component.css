@@ -1,0 +1,51 @@
+main{
+    padding: 20px;
+    
+}
+
+
+
+.product{
+    margin:20px 0px;
+    box-shadow: -10px 5px 10px gray;
+    top:0;
+    transition: top ease 0.5s;
+}
+
+.product:hover{
+    top:-10px;
+}
+
+.product img{
+    width: 100%;
+    
+}
+
+.bikename{
+    font-size: small;
+}
+
+.precio{
+    font-size: larger;
+}
+
+@media (min-width: 450px){
+    main{
+        display: flex;
+    justify-content: center;
+    }
+    .salePart{
+        width:70%;
+    }
+}
+
+@media (min-width: 800px){
+    .showProducts{
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
+    .product{
+        max-width: 250px;
+    }
+}

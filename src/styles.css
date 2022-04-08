@@ -1,1 +1,16 @@
 /* You can add global styles to this file, and also import other style files */
+@font-face {
+    font-family: gravity;
+    src: url(../src/assets/fonts/Gravitas_One/GravitasOne-Regular.ttf) format("opentype");
+  }
+
+@font-face {
+    font-family: montserrat;
+    src: url(../src/assets/fonts/Montserrat/Montserrat-VariableFont_wght.ttf) format("opentype");
+  }
+  *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    font-family: 'montserrat', 'arial', sans-serif;
+}

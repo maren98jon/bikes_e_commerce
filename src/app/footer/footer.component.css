@@ -1,0 +1,53 @@
+footer{
+    background-color: rgb(244, 201, 27);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+h3{
+    margin:20px;
+}
+
+.footerBlocks{
+    display: flex;
+    flex-direction: column;
+}
+
+.footerInfo{
+    padding: 10px;
+    align-items: center;
+    text-align: center;
+}
+
+#footerCopyright{
+    width: 100%;
+    background-color: black;
+    color: rgb(244, 201, 27);
+    display: flex;
+    justify-content: center;
+}
+
+#footerCopyright div{
+    margin: 40px 0;
+    text-align: center;
+    width:80%;
+    font-size: xx-small;
+
+}
+
+#footerCopyright div p{
+    margin: 10px 0;
+    
+}
+
+#socialLogos img{
+    width: 30px;
+    margin: 8px 10px;
+}
+
+@media (min-width: 450px){
+    .footerBlocks{
+        flex-direction: row;
+    }
+}

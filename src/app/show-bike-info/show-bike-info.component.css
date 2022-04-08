@@ -1,0 +1,29 @@
+main{
+    display: flex;
+    flex-direction: column;
+}
+
+.bikephoto{
+    width: 100%;
+}
+
+.bikephoto img{
+    display: flex;
+    width: 100%;
+}
+main div{
+    margin:5px 0;
+    padding:10px 10px;
+}
+
+.buyButton{
+   
+    padding:10px 10px;
+    text-align: center;
+    background-color: black;
+    color: rgb(244, 201, 27);
+}
+
+.red{
+    color:red;
+}

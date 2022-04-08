@@ -1,0 +1,36 @@
+<main *ngIf="logged">
+    <div id="main">
+    <div class="cartTitle">
+        <h2>Mi cesta:</h2>
+    </div>
+    <div *ngIf="!empty">
+    <div class="cartPart">
+        <div class="myCart" *ngFor="let bike of myCart;let i = index">
+            <div class="nameContainer">
+                <p>{{bike.name}}</p>
+            </div>
+            <div class="photoContainer">
+                <img src="{{bike.photo}}" alt="">
+            </div>
+            <div class="priceContainer">
+                <p>{{bike.price}}€</p>
+            </div>
+            <div>
+                <p (click)="deletePreSale(bike.id)" id="theX">+</p>
+            </div>
+        </div>
+    </div>
+    <div id="total">
+        <h3>TOTAL:</h3>
+        <p>{{precioTotal}}€</p>
+    </div>
+    <div (click)="payAllBikes()" id="payCart">
+        <p>Realizar pago</p>
+    </div>
+</div>
+<div *ngIf="empty">
+    <img id="emptyCart" src="https://www.pngkey.com/png/detail/411-4119504_el-carrito-de-la-compra-est-vaco-shopping.png" alt="carritovacio">
+    <p>No tiene ningún producto en su cesta.</p>
+</div>
+</div>
+</main>

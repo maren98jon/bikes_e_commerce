@@ -1,0 +1,73 @@
+main{
+    display: flex;
+    justify-content: center;
+}
+#loginMain{
+    display: flex;
+    flex-direction: column;
+    padding:60px 50px;
+}
+
+.login{
+    display: flex;
+    flex-direction: column;
+}
+.loginTitle{
+    margin-bottom: 10px;
+}
+
+.loginForm{
+    display: flex;
+    flex-direction: column;
+    width: 75%;
+}
+
+.loginForm input{
+    color: black;
+    margin: 10px 0;
+}
+
+.loginForm  a{
+    margin:10px 0;
+    font-size: smaller;
+}
+
+.loginButton{
+    margin-bottom: 20px;
+    background-color: rgb(244, 201, 27);
+    padding: 7px 15px;
+    border-radius: 4px;
+    text-align: center;
+    position: relative;
+    box-shadow: -7px 3px 7px gray;
+    top:0;
+    transition: top ease 0.5s;
+}
+
+.loginButton:hover{
+    font-weight: bold;
+    top: -5px;
+}
+
+.imNew{
+    margin-bottom: 15px;
+    font-weight: bold;
+}
+
+.checkBox{
+    display: flex;
+    flex-direction: row;
+    font-size: 11px;
+    margin: 9px 0;
+    align-items: center;
+}
+
+.checkBox input{
+    margin-right: 10px;
+}
+
+@media (min-width:450px){
+    #loginMain{
+        width:450px;
+    }
+}

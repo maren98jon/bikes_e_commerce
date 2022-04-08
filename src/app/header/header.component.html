@@ -1,0 +1,52 @@
+<header id="header">
+    <div id="headerMain">
+        
+        <div>
+            <h1 id="title" routerLink="/">ALGO<span style="color:white">RIDERS</span></h1>
+        </div>
+        <div id="bigUser">
+            <div (click)="showMore()" id="userContainer">
+            <div id="userCircle">
+                <img id="userIcon" src="/assets/images/iconUser.png" alt="userIcon">
+            </div>
+            <p>Hola {{autentification}}!</p>
+            </div>
+            <div id="userBtn" *ngIf="showUserOptions">
+                <div *ngIf="logged">
+                    <p routerLink="/my-account">Mi cuenta</p>
+                </div>
+                <div (click)="logOut()" *ngIf="logged">
+                    <p>Cerrar sesión</p>
+                </div>
+                
+                <div *ngIf="!logged">
+                    <p routerLink="/login">Iniciar sesión</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div id="headerNav">
+        <nav>
+            <div (click)="changeShow()" class="navigateA">
+                <a >Bicicletas</a>
+                <div [ngClass]="{show:no,noshow:!no}">
+                    <a routerLink="/bikes"><b>TODAS</b></a>
+                    <a href="">Montaña</a>
+                    <a href="">Carretera</a>
+                    <a href="">Eléctrica</a>
+                    <a href="">Paseo</a>
+                    <a href="">Infantil</a>
+                </div>
+            </div>
+            <div class="navigateA">
+                <a href="">Mis Compras</a>
+            </div>
+            <div class="navigateA">
+                <a routerLink="/cart">Mi Cesta</a>
+            </div>
+            <div [ngClass]="{navigateA:admin,showUser:!admin}">
+                <a routerLink="/admin">Admin Mode</a>
+            </div>
+        </nav>
+    </div>
+</header>

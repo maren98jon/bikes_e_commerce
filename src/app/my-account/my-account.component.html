@@ -1,0 +1,63 @@
+<main>
+    <div id="myAccountMail">
+    <div>
+        <h2>Bienvenido {{localStorageData?.name}}!</h2>
+    </div>
+    <div id="optionsContainer">
+        <div id="optionText">
+            <p>Tu cuenta:</p>
+        </div>
+        <div id="optionButtons">
+            <div (click)="changeEdit()">
+                <p>Editar mi cuenta</p>
+            </div>
+            <div>
+                <p (click)="careful()">Eliminar mi cuenta</p>
+            </div>
+        </div>
+    </div>
+    <div *ngIf="!edit" class="formContainer">
+        <div>
+            <label for="name">Nombre:</label>
+            <input disabled="" type="text" name="name" id="name" [(ngModel)]="localStorageData.name">
+        </div>
+        <div>
+            <label for="lastName">Apellido:</label>
+            <input disabled="" type="text" name="lastName" id="lastName" [(ngModel)]="localStorageData.lastName">
+        </div>
+        <div>
+            <label for="mail">Mail:</label>
+            <input disabled="" type="text" name="mail" id="mail" [(ngModel)]="localStorageData.mail">
+        </div>
+        <div>
+            <label for="password">Contraseña:</label>
+            <input disabled="" type="password" name="password" placeholder="Contraseña" id="password" [(ngModel)]="localStorageData.password">
+        </div>
+    </div>
+    <div *ngIf="edit" class="formContainer">
+        <div>
+            <label for="name">Nombre:</label>
+            <input type="text" name="name" id="name" [(ngModel)]="localStorageData.name">
+        </div>
+        <div>
+            <label for="lastName">Apellido:</label>
+            <input type="text" name="lastName" id="lastName" [(ngModel)]="localStorageData.lastName">
+        </div>
+        <div>
+            <label for="mail">Mail:</label>
+            <input type="text" name="mail" id="mail" [(ngModel)]="localStorageData.mail">
+        </div>
+        <div>
+            <label for="password">Contraseña:</label>
+            <input type="password" name="password" id="password" placeholder="Contraseña" [(ngModel)]="localStorageData.password">
+        </div>
+        <div>
+            <label for="checkpassword">Contraseña:</label>
+            <input type="password" name="checkpassword" id="checkpassword" placeholder="Confirme la contraseña" [(ngModel)]="checkpassword">
+        </div>
+    </div>
+    <div id="confirmBtn" *ngIf="edit" (click)="updateUser()"> 
+        <p>Confirmar cambios</p>
+    </div>
+</div>
+</main>

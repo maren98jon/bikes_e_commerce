@@ -1,0 +1,61 @@
+main{
+   display: flex;
+   justify-content: center;
+}
+
+#myAccountMail{
+    padding:20px
+}
+
+#optionsContainer{
+    padding:20px 0;
+    display: flex;
+    justify-content: space-between;
+}
+
+#optionText{
+    font-size: large;
+}
+
+#optionButtons{
+    text-align: center;
+}
+#optionButtons div{
+    background-color: rgb(244, 201, 27);
+    border-radius: 3px;
+    margin: 5px 0;
+    padding: 0 6px;
+}
+
+
+
+.formContainer{
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.formContainer div{
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin: 5px 0;
+}
+
+#confirmBtn{
+    margin:20px 0;
+    padding: 8px 10px;
+    width: 40%;
+    background-color: rgb(244, 201, 27);
+    border-radius: 5px;
+}
+
+#confirmBtn:hover{
+    font-weight: bold;
+}
+
+@media (min-width:450px){
+    #myAccountMail{
+        width:450px;
+    }
+}

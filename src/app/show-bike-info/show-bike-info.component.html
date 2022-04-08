@@ -1,0 +1,36 @@
+<main>
+    <div class="name">
+        <h2>{{singleBike?.name}}</h2>
+    </div>
+    <div>
+        <h3>{{singleBike?.brand}}</h3>
+    </div>
+    <div class="bikephoto">
+        <img src="{{singleBike?.photo}}" alt="bikephoto">
+    </div>
+    <div>
+        <p>Talla: {{singleBike?.size}}</p>
+    </div>
+    <div>
+        <p>Tamaño de rueda: {{singleBike?.wheelSize}}</p>
+    </div>
+    <div>
+        <p>Descripción: {{singleBike?.description}}</p>
+    </div>
+    <div *ngIf="!sale">
+        <p>Precio: {{singleBike?.price}}€</p>
+    </div>
+    <div *ngIf="sale">
+        <p>OFERTA!</p>
+        <p>Antes: {{singleBike?.originalPrice}}€</p>
+        <p class="red">Ahora: {{singleBike?.price}}€</p>
+    </div>
+    <div *ngIf="logged">
+    <div *ngIf="available" class="buyButton" (click)="buyBike()">
+        <p>COMPRAR</p>
+    </div>
+    <div *ngIf="!available" class="buyButton">
+        <p>AGOTADO TEMPORALMENTE</p>
+    </div>
+</div>
+</main>

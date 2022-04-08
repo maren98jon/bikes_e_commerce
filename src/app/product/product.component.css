@@ -1,0 +1,32 @@
+.buyBike{
+    display: flex;
+    flex-direction: column; 
+}
+
+.bikeImg{
+    width: 100%;
+}
+
+.buttonsContainer{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+}
+
+.button{
+    width:40%;
+    background-color: rgb(244, 201, 27);
+    border-radius: 3px;
+    margin:5px 0;
+    padding: 5px 10px;
+}
+
+.button:hover{
+    cursor: pointer;
+}
+
+@media (min-width: 450px){
+    .buyBike{
+        max-width:300px;
+    }
+}

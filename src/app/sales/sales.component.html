@@ -1,0 +1,14 @@
+<main>
+    <div class="salePart">
+        <h2>
+            Estas son las ofertas de esta semana:
+        </h2>
+        <div class="showProducts">
+            <div class="product" *ngFor="let bike of bikes; let i = index">
+                <div *ngIf="bike.price != bike.originalPrice">
+                    <app-product [bike]="bike"></app-product>
+            </div>
+            </div>
+        </div>
+    </div>
+</main>

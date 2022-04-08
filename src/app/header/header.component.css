@@ -1,0 +1,215 @@
+header{
+    display: flex;
+    flex-direction: column;
+}
+
+#title{
+    font-size:3em;
+    margin: 20px 0;
+}
+
+#title:hover{
+    cursor: pointer;
+}
+
+a{
+    text-decoration: none;
+    color: black;
+}
+
+#headerMain{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-content: space-between;
+    background-size:cover; 
+    width:auto;
+    background: url(../../assets/images/wp6899583.webp);
+    background-position:50% 50%;
+    color: rgb(244, 201, 27);
+}
+
+#bigUser{
+    display: flex;
+}
+
+#userContainer{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-bottom: 15px;
+}
+
+#userContainer:hover{
+    cursor:pointer;
+}
+
+#userBtn{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 10px;
+    
+}
+
+
+#userBtn:hover{
+    cursor: pointer;
+}
+
+#userBtn div{
+    background-color: rgb(255, 232, 140);
+    color: black;
+    border-radius: 2px;
+    border: solid 2px black;
+}
+
+#userCircle{
+    height: 60px;
+    width: 60px;
+    background-color: white;
+    border-radius: 50%;
+}
+
+#userIcon{
+    height: 60px;
+    width: 60px;
+    
+    filter: brightness(1.1);
+    mix-blend-mode: multiply;
+    
+}
+
+#headerNav{
+    display: flex;
+    justify-content: center;
+    background-color: gray;
+    font-family: 'montserrat','arial','sans-serif';
+}
+
+#headerNav nav{
+    display: flex;
+    flex-direction: column;
+    width: 80%;
+    color: black;
+    align-items: center;
+}
+
+.navigateA{
+    display: flex;
+    
+    font-size: 50px;
+    border-radius: 2rem;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background-color: rgb(255, 232, 140);
+    border: solid 0.5px black;
+    border-radius: 6px;
+    font-size: 1.2rem;
+    box-shadow: -10px 5px 10px gray;
+    top:0;
+    transition: top ease 0.5s;
+}
+
+.navigateA:hover{
+    background-color: rgb(244, 201, 27);
+    color: black;
+    top: -5px;
+    cursor: pointer;
+    
+}
+
+.navigateA a{
+    font-size: 30px;
+}
+
+
+
+.show{
+    display:flex;
+    flex-direction: column;
+    border-top: dotted 3px black;
+    width: 80%; 
+
+}
+.show a:hover{
+    background-color: rgb(161, 132, 0);
+    color: white;
+}
+.noshow{
+    display: none;
+}
+
+.showAdmin{
+    display: flex;
+    border-radius: 2rem;
+    width: 100%;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    position: relative;
+    background-color: rgb(244, 201, 27);
+    border: solid 0.5px black;
+    border-radius: 2rem;
+    font-size: 1.2rem;
+    box-shadow: -10px 5px 10px gray;
+    top:0;
+    transition: top ease 0.5s;
+}
+
+.showUser{
+    display: none;
+}
+
+
+
+@media (min-width: 450px){
+    #headerMain{
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 10px;
+        
+    }
+    .userContainer{
+        padding: 10px;
+        margin: 10px;
+
+    }
+    #bigUser p{
+        background-color: black;
+        color: rgb(244, 201, 27);
+    }
+
+    #header nav{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        height: 60px;
+    }
+
+    .navigateA{
+        align-items: center;
+        margin:0 5px;
+        height: 40px;
+        background-color: rgb(244, 201, 27);
+        padding-top: 10px;
+
+    }
+
+    .show{
+        background-color: rgb(244, 201, 27);
+        width: 100%;
+    }
+
+    .navigateA a{
+        font-size: 14px;
+    }
+}
+
+
+

@@ -1,0 +1,60 @@
+<main>
+    <div>
+        <div>
+            <div (click)="showBikes(2,'mountain')" class="categoryTitle">
+                <p>MONTAÑA</p>
+                <p class="theX">+</p>
+            </div> 
+            <div class="bikes" *ngIf="this.option=='mountain'">
+                <div *ngFor="let bike of bikes;let i = index">
+                    <app-product [bike]="bike"></app-product>
+                </div>
+            </div>
+        </div>
+        <div>
+            <div (click)="showBikes(3,'road')" class="categoryTitle">
+                <p>CARRETERA</p>
+                <p class="theX">+</p>
+            </div> 
+            <div class="bikes" *ngIf="this.option=='road'">
+            <div *ngFor="let bike of bikes;let i = index">
+                <app-product [bike]="bike"></app-product>
+                
+            </div>
+            </div>
+        </div>
+        <div>
+            <div (click)="showBikes(4,'electric')" class="categoryTitle">
+                <p>ELÉCTRICAS</p>
+                <p class="theX">+</p>
+            </div> 
+            <div class="bikes" *ngIf="this.option=='electric'">
+            <div *ngFor="let bike of bikes;let i = index">
+                <app-product [bike]="bike"></app-product>
+            </div>
+            </div>
+        </div>
+        <div>
+            <div (click)="showBikes(5,'route')" class="categoryTitle">
+                <p>PASEO</p>
+                <p class="theX">+</p>
+            </div> 
+            <div class="bikes" *ngIf="this.option=='route'">
+            <div *ngFor="let bike of bikes;let i = index">
+                <app-product [bike]="bike"></app-product>
+            </div>
+            </div>
+        </div>
+        <div>
+            <div (click)="showBikes(6,'child')" class="categoryTitle">
+                <p>INFANTILES</p>
+                <p class="theX">+</p>
+            </div> 
+            <div class="bikes" *ngIf="this.option=='child'">
+            <div *ngFor="let bike of bikes;let i = index">
+                <app-product [bike]="bike"></app-product>
+            </div>
+            </div>
+        </div>
+    </div>
+</main>

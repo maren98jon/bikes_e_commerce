@@ -1,0 +1,48 @@
+<main>
+    <div id="loginMain">
+    <div class="login" *ngIf="show">
+        <div class="loginTitle">
+            <h2>Iniciar sesión:</h2>
+        </div>
+        <div class="loginForm">
+            <input type="mail" name="mail" id="logmail" placeholder="E-mail" [(ngModel)]="logMail">
+            <input type="password" name="pass" id="pass" placeholder="Contraseña" [(ngModel)]="logPass">
+            <a href="" (click)="rememberPass()">He olvidado la contraseña</a>
+            <p class="loginButton" (click)="logIn()">Iniciar sesión</p>
+            
+            <div class="changeLogin">
+                <p class="imNew">Soy nuevo:</p>
+                <p class="loginButton" (click)="changeShow()">Crear cuenta</p>
+            </div>
+        </div>
+        
+    </div>
+    <div class="login" *ngIf="!show">
+        <div class="loginTitle">
+            <h2>Crear cuenta:</h2>
+        </div>
+        <div class="loginForm">
+            <input type="text" name="name" id="name" placeholder="Nombre" [(ngModel)]="regName">
+            <input type="text" name="lastName" id="lastName" placeholder="Apellido" [(ngModel)]="regLastName">
+            <input type="mail" name="mail" id="regmail" placeholder="E-mail" [(ngModel)]="regMail">
+            <input [ngStyle]="{color:correct}" type="password" name="pass" id="regpass" placeholder="Contraseña" [(ngModel)]="regPass1">
+            <input [ngStyle]="{color:correct}" type="password" name="pass" id="reg2pass" placeholder="Confirmar contraseña" [(ngModel)]="regPass2">
+            <div class="checkBox">
+                <input type="checkbox" name="read" id="read" [(ngModel)]="checkBox">
+                <p>He leído y acepto <a href="https://trollface.dk" target="_blank">la politica de privacidad</a></p>
+            </div>
+            <div class="checkBox">
+                <input type="checkbox" name="send" id="send">
+                <p>Deseo recibir novedades y ofertas</p>
+            </div>
+            <p class="loginButton" (click)="createButton()">Crear cuenta</p>
+            <div class="changeLogin">
+                <p class="imNew">Ya tengo una cuenta:</p>
+                <p class="loginButton" (click)="changeShow()">Loguearme</p>
+            </div>
+        </div>
+            
+    </div>
+</div>
+    
+</main>
